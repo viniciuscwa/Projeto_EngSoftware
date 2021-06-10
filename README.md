@@ -1,4 +1,4 @@
-# Calculadora do windows 10 em HTML
+# Calculadora em HTML
 
 [![Hcode Treinamentos](https://www.hcode.com.br/res/img/hcode-200x100.png)](https://www.hcode.com.br)
 
