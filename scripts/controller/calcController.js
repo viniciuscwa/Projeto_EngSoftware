@@ -2,9 +2,9 @@ class calcController{
 
     constructor(){
 
-        this._lastNumber = "";
-        this._lastOper = "";
-        this._algnum = [];
+        this._ultNum = "";
+        this._ultOp = "";
+        this._newobj = [];
         this._ps = false;
         this._displayCalcEl = document.querySelector("#display");
         this.btnCont();
@@ -27,9 +27,9 @@ class calcController{
     }
     setLastNumberToDisplay(){
 
-        let lastNumb = this.getLast(false);
-        if(!lastNumb || this.isOperator(this.getLastItem()))lastNumb = 0;
-        this.DisplayCalc = lastNumb;
+        let ultNum = this.getLast(false);
+        if(!ultNum || this.isOperator(this.getLastItem()))ultNum = 0;
+        this.DisplayCalc = ultNum;
 
     }
 
@@ -50,7 +50,7 @@ class calcController{
 
         if(!this._ps)this._ps = true;
         let res;
-        let lastNumb = (this.DisplayCalc != 0 && this.isOperator(this.getLastItem())) ? this.getLast(false) : this.getLastItem();
+        let ultNum = (this.DisplayCalc != 0 && this.isOperator(this.getLastItem())) ? this.getLast(false) : this.getLastItem();
         if(txt == "√"){
 
             res = (isNaN(lastNumb)) ? Math.sqrt("0") : Math.sqrt(lastNumb);
